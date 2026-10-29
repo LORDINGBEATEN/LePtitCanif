@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Le p'tit Canif</title>
+<meta name="description" content="Le p'tit Canif : de petites applications web gratuites qui partagent un seul compte.">
+<meta name="theme-color" content="#f2f7f3" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0e1812" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="preload" href="fonts/nunito-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css">
+<!-- Pour ajouter une app : ajouter une ligne dans ce tableau (URL en https obligatoire). -->
+<script type="application/json" id="apps-data">
+[
+  { "nom": "Pousse-Pousse", "description": "Application de gestion de jardin.", "url": "https://a-completer.invalid/pousse-pousse" },
+  { "nom": "Jeu-Sais", "description": "À COMPLÉTER : une ligne pour décrire Jeu-Sais.", "url": "https://a-completer.invalid/jeu-sais" }
+]
+</script>
+<script src="script.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#contenu">Aller au contenu</a>
+<header class="entete">
+  <div class="conteneur entete-in">
+    <a class="marque" href="index.html"><img src="logo.svg" alt="" width="40" height="40"><span>Le p'tit Canif</span></a>
+    <nav aria-label="Navigation principale">
+      <ul>
+        <li><a href="index.html" aria-current="page">Accueil</a></li>
+        <li><a href="compte.html">Votre compte</a></li>
+        <li><a href="confidentialite.html">Confidentialité</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="contenu" tabindex="-1">
+  <div class="conteneur">
+    <section class="hero">
+      <img src="logo.svg" alt="" width="96" height="96">
+      <h1>Le p'tit Canif</h1>
+      <p class="chapo">De petites applications web gratuites, simples et indépendantes, qui partagent un seul compte.</p>
+    </section>
+
+    <section aria-labelledby="titre-apps">
+      <h2 id="titre-apps">Les applications</h2>
+      <div id="apps-liste" class="cartes"></div>
+      <noscript><p>JavaScript est nécessaire pour afficher la liste des applications.</p></noscript>
+    </section>
+
+    <section aria-labelledby="titre-compte">
+      <h2 id="titre-compte">Un seul compte pour toutes les apps</h2>
+      <ol class="etapes">
+        <li><span>Vous vous inscrivez une seule fois, depuis n'importe quelle app Le p'tit Canif.</span></li>
+        <li><span>Le même e-mail et le même mot de passe vous ouvrent toutes les autres apps.</span></li>
+        <li><span>Les données de chaque app restent rangées à part : elles ne sont pas mélangées.</span></li>
+      </ol>
+      <ul class="liens-utiles">
+        <li><a href="compte.html">Tout savoir sur votre compte</a></li>
+        <li><a href="confidentialite.html">Confidentialité et mentions légales</a></li>
+      </ul>
+    </section>
+  </div>
+</main>
+
+<footer class="pied">
+  <div class="conteneur">
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="compte.html">Votre compte</a></li>
+      <li><a href="confidentialite.html">Confidentialité et mentions légales</a></li>
+    </ul>
+    <p>© 2026 Le p'tit Canif</p>
+  </div>
+</footer>
+</body>
+</html>

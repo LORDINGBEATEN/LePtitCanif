@@ -1,0 +1,11 @@
+{
+  "name": "le-ptit-canif",
+  "private": true,
+  "description": "Site chapeau de la suite d'applications Le p'tit Canif (statique, sans build).",
+  "scripts": {
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

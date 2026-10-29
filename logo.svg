@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-label="Le p'tit Canif : un canif ouvert avec trois lames">
+  <title>Le p'tit Canif</title>
+  <defs>
+    <linearGradient id="fond" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b6b40"/>
+      <stop offset="1" stop-color="#27a56a"/>
+    </linearGradient>
+  </defs>
+  <style>
+    @media (prefers-reduced-motion: no-preference) {
+      .lame { transform-box: view-box; transform-origin: 64px 92px; animation-duration: .9s; animation-timing-function: cubic-bezier(.2,.8,.2,1); animation-fill-mode: backwards; }
+      .gauche { animation-name: ouvre-gauche; animation-delay: .15s; }
+      .droite { animation-name: ouvre-droite; animation-delay: .3s; }
+      .milieu { animation-name: ouvre-milieu; }
+    }
+    @keyframes ouvre-gauche { from { transform: rotate(50deg); } }
+    @keyframes ouvre-droite { from { transform: rotate(-50deg); } }
+    @keyframes ouvre-milieu { from { transform: rotate(0deg); } }
+  </style>
+  <rect width="128" height="128" rx="28" fill="url(#fond)"/>
+  <g stroke="#0b6b40" stroke-width="2" stroke-linejoin="round">
+    <!-- lame de gauche : un point d'interrogation -->
+    <g transform="rotate(-50 64 92)"><g class="lame gauche">
+      <path d="M54 96V48C54 36 60 28 66 24C72 32 74 40 74 48V96Z" fill="#f2f7f3"/>
+      <g transform="translate(64 92)" fill="none" stroke="#0b6b40" stroke-width="3.2" stroke-linecap="round">
+        <path d="M-5 -49C-5 -58 5 -58 5 -50C5 -44 0 -44 0 -38"/>
+        <circle cx="0" cy="-30" r="1.6" fill="#0b6b40" stroke="none"/>
+      </g>
+    </g></g>
+    <!-- lame de droite : vide -->
+    <g transform="rotate(50 64 92)"><g class="lame droite">
+      <path d="M54 96V48C54 36 60 28 66 24C72 32 74 40 74 48V96Z" fill="#f2f7f3"/>
+    </g></g>
+    <!-- lame du milieu : une pousse -->
+    <g class="lame milieu">
+      <path d="M54 96V48C54 36 60 28 66 24C72 32 74 40 74 48V96Z" fill="#f2f7f3"/>
+      <g transform="translate(64 92)" fill="#0b6b40" stroke="none">
+        <path d="M-1.8 -22h3.6v22h-3.6z"/>
+        <path d="M0 -36C-10 -36 -13 -45 -12 -51C-4 -51 1 -45 0 -36Z"/>
+        <path d="M0 -30C10 -30 13 -39 12 -45C4 -45 -1 -39 0 -30Z"/>
+      </g>
+    </g>
+  </g>
+  <!-- manche et axe -->
+  <rect x="50" y="88" width="28" height="30" rx="9" fill="#0a3d25" stroke="#f2f7f3" stroke-width="2"/>
+  <circle cx="64" cy="92" r="4" fill="#f2f7f3"/>
+</svg>
