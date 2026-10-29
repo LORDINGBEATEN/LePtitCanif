@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Le p'tit Canif</title>
 <meta name="description" content="Le p'tit Canif : de petites applications web gratuites qui partagent un seul compte.">
-<meta name="theme-color" content="#f2f7f3" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0e1812" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f0f6f8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0c171a" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="logo.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="icon-192.png">
 <link rel="manifest" href="manifest.webmanifest">
@@ -39,13 +39,37 @@
 <main id="contenu" tabindex="-1">
   <div class="conteneur">
     <section class="hero">
-      <img src="logo.svg" alt="" width="96" height="96">
+      <svg class="canif" viewBox="0 6 128 114" width="220" height="196" aria-hidden="true" focusable="false">
+        <g class="traits">
+          <g transform="rotate(-50 64 92)"><g class="lame gauche">
+            <path d="M54 96V48C54 36 60 28 66 24C72 32 74 40 74 48V96Z"/>
+            <g transform="translate(64 92)" class="symbole-trait">
+              <path d="M-5 -49C-5 -58 5 -58 5 -50C5 -44 0 -44 0 -38"/>
+              <circle class="point" cx="0" cy="-30" r="1.6"/>
+            </g>
+          </g></g>
+          <g transform="rotate(50 64 92)"><g class="lame droite">
+            <path class="vide" d="M54 96V48C54 36 60 28 66 24C72 32 74 40 74 48V96Z"/>
+          </g></g>
+          <g class="lame milieu">
+            <path d="M54 96V48C54 36 60 28 66 24C72 32 74 40 74 48V96Z"/>
+            <g transform="translate(64 92)" class="symbole-plein">
+              <path d="M-1.8 -22h3.6v22h-3.6z"/>
+              <path d="M0 -36C-10 -36 -13 -45 -12 -51C-4 -51 1 -45 0 -36Z"/>
+              <path d="M0 -30C10 -30 13 -39 12 -45C4 -45 -1 -39 0 -30Z"/>
+            </g>
+          </g>
+        </g>
+        <rect class="manche" x="50" y="88" width="28" height="30" rx="9"/>
+        <circle class="axe" cx="64" cy="92" r="4"/>
+      </svg>
       <h1>Le p'tit Canif</h1>
       <p class="chapo">De petites applications web gratuites, simples et indépendantes, qui partagent un seul compte.</p>
     </section>
 
     <section aria-labelledby="titre-apps">
-      <h2 id="titre-apps">Les applications</h2>
+      <h2 id="titre-apps">Une lame par app</h2>
+      <p>Choisissez une lame pour ouvrir l'application correspondante.</p>
       <div id="apps-liste" class="cartes"></div>
       <noscript><p>JavaScript est nécessaire pour afficher la liste des applications.</p></noscript>
     </section>

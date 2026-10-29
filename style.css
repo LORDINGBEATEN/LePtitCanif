@@ -11,34 +11,34 @@
 
 :root {
   color-scheme: light dark;
-  --bg: #f2f7f3;
+  --bg: #f0f6f8;
   --surface: #ffffff;
-  --text: #14231a;
-  --muted: #41564a;
-  --primary: #0b6b40;
-  --primary-2: #27a56a;
-  --link: #0b6b40;
-  --btn-bg: #0b6b40;
+  --text: #10242b;
+  --muted: #41575f;
+  --primary: #0f5c6e;
+  --primary-2: #2a95ab;
+  --link: #0f5c6e;
+  --btn-bg: #0f5c6e;
   --btn-fg: #ffffff;
-  --border: #b4cbbb;
-  --focus: #0b4f9c;
+  --border: #b3ccd3;
+  --focus: #a24a00;
   --mark-bg: #fff1c2;
   --mark-fg: #5a3b00;
-  --shadow: 0 1px 2px rgba(11, 107, 64, .08), 0 6px 18px rgba(11, 107, 64, .10);
+  --shadow: 0 1px 2px rgba(15, 92, 110, .08), 0 6px 18px rgba(15, 92, 110, .10);
   --radius: 16px;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #0e1812;
-    --surface: #16241c;
-    --text: #e9f3ec;
-    --muted: #b0c4b7;
-    --link: #7ddaa9;
-    --btn-bg: #7ddaa9;
-    --btn-fg: #07261a;
-    --border: #3a5546;
-    --focus: #8ec5ff;
+    --bg: #0c171a;
+    --surface: #13242a;
+    --text: #e5f2f5;
+    --muted: #a9c3cb;
+    --link: #7fd3e6;
+    --btn-bg: #7fd3e6;
+    --btn-fg: #062229;
+    --border: #35525b;
+    --focus: #ffd27a;
     --mark-bg: #4a3a0a;
     --mark-fg: #ffe9a8;
     --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 6px 18px rgba(0, 0, 0, .35);
@@ -104,15 +104,32 @@ p, ul, ol { margin: 0 0 1em; }
 .chapo { font-size: 1.2rem; color: var(--muted); }
 
 .hero { text-align: left; padding: 8px 0 4px; }
-.hero img { display: block; border-radius: 24px; box-shadow: var(--shadow); margin-bottom: 16px; }
+.canif { display: block; width: min(220px, 70%); height: auto; margin: 0 0 12px; }
+.canif .traits path { fill: var(--surface); stroke: var(--primary); stroke-width: 2; stroke-linejoin: round; }
+.canif .traits .vide { stroke-dasharray: 4 3; }
+.canif .symbole-trait path { fill: none; stroke: var(--primary); stroke-width: 3.2; stroke-linecap: round; }
+.canif .traits .symbole-plein path { fill: var(--primary); stroke: none; }
+.canif .point { fill: var(--primary); }
+.canif .manche { fill: var(--text); stroke: var(--surface); stroke-width: 2; }
+.canif .axe { fill: var(--surface); }
+@media (prefers-reduced-motion: no-preference) {
+  .canif .lame { transform-box: view-box; transform-origin: 64px 92px; animation: .9s cubic-bezier(.2, .8, .2, 1) backwards; }
+  .canif .gauche { animation-name: ouvre-gauche; animation-delay: .15s; }
+  .canif .droite { animation-name: ouvre-droite; animation-delay: .3s; }
+  .canif .milieu { animation-name: ouvre-milieu; }
+}
+@keyframes ouvre-gauche { from { transform: rotate(50deg); } }
+@keyframes ouvre-droite { from { transform: rotate(-50deg); } }
+@keyframes ouvre-milieu { from { transform: rotate(0deg); } }
 
-.cartes { display: grid; gap: 16px; grid-template-columns: 1fr; }
+.cartes { display: grid; gap: 12px; grid-template-columns: 1fr; }
+.carte.libre { border-style: dashed; box-shadow: none; background: transparent; color: var(--muted); }
 .carte, .bloc {
   background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
   box-shadow: var(--shadow); padding: 18px;
 }
 .carte { display: flex; flex-direction: column; gap: 12px; }
-.carte p { margin: 0; color: var(--muted); flex: 1; }
+.carte p { margin: 0; color: var(--muted); }
 
 .bouton {
   display: inline-flex; align-items: center; justify-content: center; align-self: flex-start;
@@ -159,8 +176,12 @@ th { font-weight: 800; }
 .pied a { display: inline-flex; align-items: center; min-height: 44px; }
 .pied p { margin: 0; color: var(--muted); }
 
+@media (min-width: 30rem) {
+  .carte:not(.libre) { flex-direction: row; align-items: center; justify-content: space-between; }
+}
+
 @media (min-width: 40rem) {
-  .cartes, .deux-colonnes { grid-template-columns: 1fr 1fr; }
+  .deux-colonnes { grid-template-columns: 1fr 1fr; }
   main { padding-top: 40px; }
 }
 

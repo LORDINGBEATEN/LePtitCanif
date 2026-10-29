@@ -32,9 +32,16 @@
     precision.textContent = " " + app.nom;
     lien.appendChild(precision);
 
-    carte.appendChild(titre);
-    carte.appendChild(description);
+    var texte = document.createElement("div");
+    texte.appendChild(titre);
+    texte.appendChild(description);
+    carte.appendChild(texte);
     carte.appendChild(lien);
     liste.appendChild(carte);
   });
+
+  var libre = document.createElement("div");
+  libre.className = "carte libre";
+  libre.textContent = "Lame libre : la prochaine app s'ouvrira ici.";
+  liste.appendChild(libre);
 })();
