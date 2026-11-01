@@ -26,11 +26,12 @@
     var lien = document.createElement("a");
     lien.className = "bouton";
     lien.href = app.url;
-    lien.rel = "noopener";
+    lien.target = "_blank";
+    lien.rel = "noopener noreferrer";
     lien.appendChild(document.createTextNode("Ouvrir"));
     var precision = document.createElement("span");
     precision.className = "visually-hidden";
-    precision.textContent = " " + app.nom;
+    precision.textContent = " " + app.nom + " (s'ouvre dans un nouvel onglet)";
     lien.appendChild(precision);
 
     var numero = document.createElement("span");
