@@ -107,7 +107,8 @@ p, ul, ol { margin: 0 0 1em; }
 .chapo + h2 { border-top: 0; padding-top: 0; }
 
 .hero { padding: 8px 0 4px; }
-.canif { display: block; width: min(200px, 60%); height: auto; margin: 0 0 12px; }
+.hero .chapo { border-bottom: 0; padding-bottom: 0; }
+.canif { display: block; width: min(200px, 60%); height: auto; margin: 0 0 16px; }
 .canif .traits path { fill: var(--bg); stroke: var(--link); stroke-width: 2.5; stroke-linejoin: round; }
 .canif .traits .vide { stroke-dasharray: 4 3; }
 .canif .symbole-trait path { fill: none; stroke: var(--link); stroke-width: 3.2; stroke-linecap: round; }
