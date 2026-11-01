@@ -15,6 +15,7 @@
   apps.forEach(function (app, i) {
     var carte = document.createElement("article");
     carte.className = "carte";
+    carte.style.setProperty("--i", i);
 
     var titre = document.createElement("h3");
     titre.textContent = app.nom;
@@ -47,6 +48,7 @@
 
   var libre = document.createElement("div");
   libre.className = "carte libre";
+  libre.style.setProperty("--i", apps.length);
   var numeroLibre = document.createElement("span");
   numeroLibre.className = "num";
   numeroLibre.textContent = "N° " + (apps.length + 1);
