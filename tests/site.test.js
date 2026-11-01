@@ -138,3 +138,10 @@ test("les marqueurs « À COMPLÉTER » restants sont comptés (information)", (
   for (const f of [...PAGES, "README.md"]) n += (lire(f).match(/À COMPLÉTER/g) || []).length;
   t.diagnostic(`${n} marqueur(s) « À COMPLÉTER » à traiter avant la mise en ligne`);
 });
+
+test("la version affichée sur l'accueil correspond à version.txt", () => {
+  const version = fs.readFileSync(path.join(__dirname, "..", "version.txt"), "utf8").trim();
+  const html = fs.readFileSync(path.join(__dirname, "..", "index.html"), "utf8");
+  assert.match(version, /^\d+\.\d+\.\d+$/);
+  assert.ok(html.includes(`<p class="version">Version ${version}</p>`), "index.html n'affiche pas la version de version.txt");
+});
