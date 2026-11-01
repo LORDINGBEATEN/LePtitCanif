@@ -15,7 +15,7 @@ Site statique : HTML, CSS et JavaScript vanilla, sans build, sans dépendance, s
 | `style.css` | Feuille de style unique (variables CSS, mode sombre automatique) |
 | `script.js` | Affiche les cartes à partir du JSON de `index.html` |
 | `logo.svg`, `icon-192.png`, `icon-512.png`, `manifest.webmanifest` | Identité visuelle |
-| `fonts/` | Nunito (woff2 local) et sa licence OFL (`OFL.txt`) |
+| `fonts/` | Nunito et Newsreader (woff2 locaux) et leurs licences OFL (`OFL-Nunito.txt`, `OFL-Newsreader.txt`) |
 | `vercel.json` | `cleanUrls`, en-têtes de sécurité, CSP stricte |
 | `tests/` | Tests `node --test` (structure, liens, nom, secrets, URL des apps, contrastes) |
 
@@ -52,4 +52,4 @@ Remplacer les URL provisoires (`a-completer.invalid`) dans `index.html`, puis tr
 
 ## Licences
 
-Police Nunito : SIL Open Font License 1.1, voir `fonts/OFL.txt`.
+Polices Nunito et Newsreader : SIL Open Font License 1.1, voir `fonts/OFL-Nunito.txt` et `fonts/OFL-Newsreader.txt`.

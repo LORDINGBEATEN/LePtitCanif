@@ -12,7 +12,7 @@
     return;
   }
 
-  apps.forEach(function (app) {
+  apps.forEach(function (app, i) {
     var carte = document.createElement("article");
     carte.className = "carte";
 
@@ -32,7 +32,12 @@
     precision.textContent = " " + app.nom;
     lien.appendChild(precision);
 
+    var numero = document.createElement("span");
+    numero.className = "num";
+    numero.textContent = "N° " + (i + 1);
+
     var texte = document.createElement("div");
+    texte.appendChild(numero);
     texte.appendChild(titre);
     texte.appendChild(description);
     carte.appendChild(texte);
@@ -42,6 +47,12 @@
 
   var libre = document.createElement("div");
   libre.className = "carte libre";
-  libre.textContent = "Lame libre : la prochaine app s'ouvrira ici.";
+  var numeroLibre = document.createElement("span");
+  numeroLibre.className = "num";
+  numeroLibre.textContent = "N° " + (apps.length + 1);
+  var annonce = document.createElement("em");
+  annonce.textContent = "À paraître : la lame libre accueillera la prochaine app.";
+  libre.appendChild(numeroLibre);
+  libre.appendChild(annonce);
   liste.appendChild(libre);
 })();
