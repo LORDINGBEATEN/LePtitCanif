@@ -139,9 +139,12 @@ test("les marqueurs « À COMPLÉTER » restants sont comptés (information)", (
   t.diagnostic(`${n} marqueur(s) « À COMPLÉTER » à traiter avant la mise en ligne`);
 });
 
-test("la version affichée sur l'accueil correspond à version.txt", () => {
-  const version = fs.readFileSync(path.join(__dirname, "..", "version.txt"), "utf8").trim();
-  const html = fs.readFileSync(path.join(__dirname, "..", "index.html"), "utf8");
+test("la version affichée dans l'en-tête de chaque page correspond à version.txt", () => {
+  const racine = path.join(__dirname, "..");
+  const version = fs.readFileSync(path.join(racine, "version.txt"), "utf8").trim();
   assert.match(version, /^\d+\.\d+\.\d+$/);
-  assert.ok(html.includes(`<p class="version">Version ${version}</p>`), "index.html n'affiche pas la version de version.txt");
+  for (const page of ["index.html", "compte.html", "confidentialite.html", "404.html"]) {
+    const html = fs.readFileSync(path.join(racine, page), "utf8");
+    assert.ok(html.includes(`<span class="version" aria-hidden="true">${version}</span>`), `${page} n'affiche pas la version ${version}`);
+  }
 });

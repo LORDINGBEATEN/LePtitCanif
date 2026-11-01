@@ -17,7 +17,7 @@ Site statique : HTML, CSS et JavaScript vanilla, sans build, sans dépendance, s
 | `logo.svg`, `icon-192.png`, `icon-512.png`, `manifest.webmanifest` | Identité visuelle |
 | `fonts/` | Nunito et Newsreader (woff2 locaux) et leurs licences OFL (`OFL-Nunito.txt`, `OFL-Newsreader.txt`) |
 | `vercel.json` | `cleanUrls`, en-têtes de sécurité, CSP stricte |
-| `version.txt`, `scripts/version.js` | Numéro de version affiché sous le titre de l'accueil ; `npm run version` l'incrémente |
+| `version.txt`, `scripts/version.js` | Numéro de version affiché sous le titre, dans l'en-tête de chaque page ; `npm run version` l'incrémente |
 | `tests/` | Tests `node --test` (structure, liens, nom, secrets, URL des apps, contrastes) |
 
 ## Ajouter une app
