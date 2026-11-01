@@ -15,8 +15,8 @@
 <!-- Pour ajouter une app : ajouter une ligne dans ce tableau (URL en https obligatoire). -->
 <script type="application/json" id="apps-data">
 [
-  { "nom": "Pousse-Pousse", "description": "Application de gestion de jardin.", "url": "https://pousse-pousse-wine.vercel.app/" },
-  { "nom": "Jeu-Sais", "description": "À COMPLÉTER : une ligne pour décrire Jeu-Sais.", "url": "https://jeu-sais.vercel.app/connexion" }
+  { "nom": "Pousse-Pousse", "description": "La lame du jardinier : plantes, semis et tâches, d'un seul geste.", "url": "https://pousse-pousse-wine.vercel.app/" },
+  { "nom": "Jeu-Sais", "description": "La lame des enfants curieux : des jeux pour apprendre en s'amusant.", "url": "https://jeu-sais.vercel.app/connexion" }
 ]
 </script>
 <script src="script.js" defer></script>
@@ -44,7 +44,7 @@
     </section>
 
     <section aria-labelledby="titre-apps">
-      <h2 id="titre-apps">Une lame par app</h2>
+      <h2 id="titre-apps" class="visually-hidden">Une lame par app</h2>
       <p>Dépliez la lame qu'il vous faut.</p>
       <div id="apps-liste" class="cartes"></div>
       <noscript><p>JavaScript est nécessaire pour afficher la liste des applications.</p></noscript>

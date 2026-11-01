@@ -46,16 +46,4 @@
     carte.appendChild(lien);
     liste.appendChild(carte);
   });
-
-  var libre = document.createElement("div");
-  libre.className = "carte libre";
-  libre.style.setProperty("--i", apps.length);
-  var numeroLibre = document.createElement("span");
-  numeroLibre.className = "num";
-  numeroLibre.textContent = "N° " + (apps.length + 1);
-  var annonce = document.createElement("em");
-  annonce.textContent = "À paraître : la lame libre accueillera la prochaine app.";
-  libre.appendChild(numeroLibre);
-  libre.appendChild(annonce);
-  liste.appendChild(libre);
 })();

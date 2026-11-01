@@ -141,12 +141,6 @@ p, ul, ol { margin: 0 0 1em; }
 .num { display: block; font-size: .9rem; font-weight: 800; }
 .carte .bouton { background: var(--btn-fg); color: var(--btn-bg); border-color: var(--btn-fg); flex: none; align-self: center; }
 .carte :focus-visible { outline-color: var(--btn-fg); outline-offset: 2px; }
-.carte.libre {
-  display: block; clip-path: none; background: transparent; color: var(--muted);
-  border: 2px dashed var(--border); padding: 12px 16px;
-}
-.carte.libre em { font-style: italic; }
-.carte.libre .num { color: var(--link); margin-bottom: 2px; }
 
 .bloc { background: var(--surface); border: 1.5px solid var(--border); padding: 18px; }
 
